@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TylerRichardSWII.Controllers.AddCustomerController">
+   <children>
+      <Label layoutX="232.0" layoutY="34.0" text="Add Customer">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="firstNameField" layoutX="125.0" layoutY="82.0" />
+      <TextField fx:id="lastNameField" layoutX="366.0" layoutY="82.0" />
+      <Label layoutX="55.0" layoutY="86.0" text="First Name:" />
+      <Label layoutX="300.0" layoutY="86.0" text="Last Name:" />
+      <Label layoutX="313.0" layoutY="134.0" text="Address:" />
+      <Label fx:id="stateLabel" layoutX="79.0" layoutY="222.0" text="State:" />
+      <Label layoutX="313.0" layoutY="177.0" text="Country:" />
+      <TextField fx:id="addressField" layoutX="367.0" layoutY="130.0" />
+      <ComboBox fx:id="stateCBox" layoutX="126.0" layoutY="218.0" onAction="#stateCBoxClicked" onShowing="#stateCBoxShowing" prefWidth="150.0" promptText="Select State/Providence" visibleRowCount="0" />
+      <ComboBox fx:id="countryCBox" layoutX="367.0" layoutY="173.0" onAction="#countrySelected" onShowing="#displayCountry" prefWidth="150.0" promptText="Select Country" />
+      <Label layoutX="295.0" layoutY="222.0" text="Customer ID:" />
+      <TextField fx:id="customerIDLabel" disable="true" editable="false" layoutX="368.0" layoutY="218.0" text="Auto Generated" />
+      <Button fx:id="addCustomerButton" layoutX="174.0" layoutY="314.0" mnemonicParsing="false" onAction="#addCustomerClicked" text="Add Customer" />
+      <Button fx:id="cancelButton" layoutX="323.0" layoutY="314.0" onAction="#cancelButtonClicked" text="Cancel" />
+      <TextField fx:id="phoneField" layoutX="126.0" layoutY="130.0" />
+      <Label layoutX="28.0" layoutY="134.0" text="Phone Number:" />
+      <TextField fx:id="postalCodeField" layoutX="125.0" layoutY="173.0" />
+      <Label fx:id="postalCodeLabel" layoutX="46.0" layoutY="177.0" text="Postal Code:" />
+   </children>
+</AnchorPane>
